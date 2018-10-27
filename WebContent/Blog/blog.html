@@ -1,0 +1,51 @@
+ <div class="container text-center">
+<div class="col-sm-3 float-right text-center">
+<p style="color:red"> {{msg}}</p>
+<div class="thumbnail">
+<div class="card bg-primary text-white ">
+
+Blog Title : <input ng-model="title" style="color:black"/><br/><br/>
+
+Blog Description : <input ng-model="description"  style="color:black"/><br/><br/>
+
+Blog Writtenby : <input ng-model="writtenby"  style="color:black"/><br/><br/>
+
+Blog Date : <input ng-model="date_blog"  style="color:black"/><br/><br/>
+
+Blog Brief : <input ng-model="brief"  style="color:black"/><br/><br/>
+
+
+<input type="button" value="create blog" ng-click="postBlog(title, description, writtenby,date_blog,brief)" style="color:black" /> <br/><br/>
+<p></p>
+</div>
+</div>
+</div>
+<!-- <div class="panel">
+<p>Output Message : {{msg}}</p>
+
+<p>StatusCode: {{statusval}}</p>
+
+<p>Status: {{statustext}}</p>
+
+<p>Response Headers: {{headers}}</p>
+
+</div>
+ -->
+
+
+</div>
+<div ng-controller="blogdata">
+{{a}}
+<input type="text" ng-model="searchbox">
+<div class="panel">
+<div class="panel-heading">Blogs</div>
+<div class="panel-body">
+<li ng-repeat="s in data|filter:searchbox ">
+
+{{'name  = '+s.blog_id+'  id  = '+s.title}}
+
+</li>
+</div>
+</div>
+
+

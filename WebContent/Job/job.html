@@ -1,0 +1,48 @@
+
+
+
+
+
+Job Role : <input ng-model="jobRole" /><br/><br/>
+
+Location: <input ng-model="jobLocation" /><br/><br/>
+
+Experience Required : <input ng-model="experienceRequired" /><br/><br/>
+
+Skills Required : <input ng-model="skillsRequired" /><br/><br/>
+
+Salary: <input ng-model="salary" /><br/><br/>
+
+
+<input type="button" value="Send" ng-click="postJob(jobRole, jobLocation, experienceRequired,skillsRequired,salary)" /> <br/><br/>
+
+</div>
+
+<p>Output Message : {{msg}}</p>
+
+<p>StatusCode: {{statusval}}</p>
+
+<p>Status: {{statustext}}</p>
+
+<p>Response Headers: {{headers}}</p>
+
+
+
+<div ng-controller="jobdata">
+
+<input type="text" ng-model="searchbox">
+
+<li ng-repeat="s in data|filter:searchbox ">
+
+
+
+{{'jobLocation  = '+s.jobLocation+'  role  = '+s.jobRole+'  experience req=   '+s.experienceRequired+'     skills='+s.skillsRequired+'  salary='+s.salary}}
+</li>
+
+
+
+</div>
+
+
+
+
